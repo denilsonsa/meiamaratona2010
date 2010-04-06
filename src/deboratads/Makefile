@@ -13,7 +13,7 @@ hipertenusa.in: gen_input_hipertenusa.exe
 	./$*.exe < $*.in > $*.out 
 	rm $*.exe
 
-all: fracoes_test hipertenusa_test pizza_test robos_test
+all: fracoes_test hipertenusa_test pizza_test robos_test contando_test
 
 clean:
 	rm -f *.exe
