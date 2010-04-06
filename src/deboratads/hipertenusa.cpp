@@ -5,12 +5,8 @@
  *      Author: Debora
  */
 
-#include <ext/hash_map>
-#include <map>
 #include <stdio.h>
 #include <stdlib.h>
-
-using namespace std;
 
 #define MAX 3170
 #define MAXHIP 10000001
@@ -37,10 +33,10 @@ int main(void) {
 		scanf("%d", &n);
 		if (!n) break;
 		if (hip[n] > 1) {
-			printf("YES\n");
+			printf("sim\n");
 		} else {
-			printf("NO\n");
+			printf("nao\n");
 		}
 	}
-	return EXIT_SUCCESS;
+	return 0;
 }
