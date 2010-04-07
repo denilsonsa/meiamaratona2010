@@ -11,7 +11,7 @@
 
 using namespace std;
 
-#define MAX 10
+#define MAX 20
 
 int p[MAX];
 int k, n, m;
@@ -40,7 +40,9 @@ void bt(int pat, int nat, long long mat) {
 		}
 		return;
 	}
-	bt(pat+1, nat+1, mat * p[pat]);
+	if (m/mat >= p[pat]) {
+		bt(pat+1, nat+1, mat * p[pat]);
+	}
 	bt(pat+1, nat, mat);
 }
 

@@ -5,6 +5,9 @@ hipertenusa.in: gen_input_hipertenusa.exe
 	./gen_input_hipertenusa.exe > hipertenusa.in
 	rm gen_input_hipertenusa.exe
 
+contando_tle.in: contando.in
+	cp contando.in contando_tle.in
+
 %.exe:
 	$(CXX) $(SRC_DIR)/$*.cpp -o $*.exe
 
