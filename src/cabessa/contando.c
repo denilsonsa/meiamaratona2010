@@ -8,6 +8,7 @@
 #define MAXN (1<<20)
 
 char primos[MAXN];
+int comb[MAXK+1][MAXK+1];
 
 void crivo()
 {
@@ -29,6 +30,27 @@ void crivo()
 		}
 	}
 
+
+}
+
+void combinacao()
+{
+	int i, j;
+
+	for (i=0; i<=MAXK; i++)
+	{
+		comb[i][0] = 1;
+		comb[i][i] = 1;
+	}
+
+	for (i=2; i<=MAXK; i++)
+	{
+		for (j=1; j<i; j++)
+		{
+			comb[i][j] = comb[i-1][j-1] + comb[i-1][j];
+		}
+	}
+
 }
 
 int primo(int i)
@@ -41,10 +63,10 @@ int m, n, k;
 int p[MAXK];
 int marca[MAXK];
 
-int calc()
+long long calc()
 {
 	int i;
-	int prod=1;
+	long long prod=1;
 	
 	for (i=0; i<k; i++)
 	{
@@ -58,23 +80,12 @@ int calc()
 		}
 	}
 
-/*	printf ("com");
-	for (i=0; i<k; i++)
-	{
-		if (marca[i])
-		{
-			printf(" %d", p[i]);
-		}
-	}
-	printf(", %d\n", m/prod);
-*/
-
 	return m/prod;
 }
 
-int bt(int p, int q)
+long long bt(int p, int q)
 {
-	int resp;
+	long long resp;
 	if (p==k)
 	{
 		if (q < n)
@@ -83,11 +94,11 @@ int bt(int p, int q)
 		}
 		if ((n-q)%2)
 		{
-			return -calc();
+			return -comb[q][n]*calc();
 		}
 		else
 		{
-			return calc();
+			return comb[q][n]*calc();
 		}
 
 	}
@@ -102,7 +113,7 @@ int bt(int p, int q)
 
 void solve()
 {
-	printf("%d\n",bt(0, 0));
+	printf("%d\n",(int)bt(0, 0));
 }
 
 int main()
@@ -110,6 +121,7 @@ int main()
 	int i;
 
 	crivo();
+	combinacao();
 
 	while (1)
 	{
