@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.9 (MiKTeX 2.7) (preloaded format=latex 2010.3.25)  7 APR 2010 16:08
+This is pdfTeX, Version 3.1415926-1.40.9 (MiKTeX 2.7) (preloaded format=pdflatex 2010.4.7)  7 APR 2010 20:16
 entering extended mode
 **prova
 (prova.tex
@@ -212,7 +212,8 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 10.
 LaTeX Font Info:    ... okay on input line 10.
  [1
 
-] [2] (hipertenusa/hipertenusa.tex
+{C:/ProgramData/MiKTeX/2.7/pdftex/config/pdftex.map}] [2] (hipertenusa/hiperten
+usa.tex
 LaTeX Font Info:    Try loading font information for T1+cmss on input line 1.
 
 ("C:\Program Files\MiKTeX 2.7\tex\latex\base\t1cmss.fd"
@@ -237,11 +238,12 @@ File: virada/virada.eps Graphic file (type eps)
  <virada/virada.eps> [5
 
 
-]) [6] (fracoes/fracoes.tex)
-[7
+
+Non-PDF special ignored!]) [6] (fracoes/fracoes.tex) [7
 
 
-] (faces/faces.tex) [8
+] (faces/faces.tex)
+[8
 
 
 ] (contando/contando.tex) [9
@@ -249,11 +251,11 @@ File: virada/virada.eps Graphic file (type eps)
 
 ] (pizza/pizza.tex
 File: pizza/pizza.eps Graphic file (type eps)
+ <pizza/pizza.eps>) [10
 
-<pizza/pizza.eps>) [10
 
 
-] (barras/barras.tex
+Non-PDF special ignored!] (barras/barras.tex
 Overfull \hbox (1.88225pt too wide) in paragraph at lines 57--57
 \T1/cmtt/m/n/10 101011011101100010101111000101101000110111101010101 
  []
@@ -275,12 +277,28 @@ Overfull \hbox (1.88225pt too wide) in paragraph at lines 57--57
 (virada/virada.aux) (fracoes/fracoes.aux) (faces/faces.aux)
 (contando/contando.aux) (pizza/pizza.aux) (barras/barras.aux)) ) 
 Here is how much of TeX's memory you used:
- 3488 strings out of 95279
- 40515 string characters out of 1182579
+ 3489 strings out of 95278
+ 40525 string characters out of 1182553
  131206 words of memory out of 1500000
  6613 multiletter control sequences out of 110000
  11185 words of font info for 30 fonts, out of 1200000 for 2000
  16 hyphenation exceptions out of 8191
  25i,10n,24p,914b,255s stack positions out of 5000i,500n,10000p,200000b,5000s
+ <C:\ProgramDat
+a\MiKTeX\2.7\fonts\pk\ljfour\jknappen\ec\dpi600\ecbx1000.pk> <C:\ProgramData\Mi
+KTeX\2.7\fonts\pk\ljfour\jknappen\ec\dpi600\ectt1000.pk> <C:\ProgramData\MiKTeX
+\2.7\fonts\pk\ljfour\jknappen\ec\dpi600\ecrm1000.pk> <C:\ProgramData\MiKTeX\2.7
+\fonts\pk\ljfour\jknappen\ec\dpi600\ecti1000.pk> <C:\ProgramData\MiKTeX\2.7\fon
+ts\pk\ljfour\jknappen\ec\dpi600\ecss2074.pk> <C:\ProgramData\MiKTeX\2.7\fonts\p
+k\ljfour\jknappen\ec\dpi600\ecbx1200.pk> <C:\ProgramData\MiKTeX\2.7\fonts\pk\lj
+four\jknappen\ec\dpi600\ecbx1440.pk><C:/Program Files/MiKTeX 2.7/fonts/type1/bl
+uesky/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmmi7.p
+fb><C:/Program Files/MiKTeX 2.7/fonts/type1/bluesky/cm/cmr10.pfb><C:/Program Fi
+les/MiKTeX 2.7/fonts/type1/bluesky/cm/cmr7.pfb><C:/Program Files/MiKTeX 2.7/fon
+ts/type1/bluesky/cm/cmsy10.pfb>
+Output written on prova.pdf (12 pages, 120938 bytes).
+PDF statistics:
+ 310 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 131072)
+ 1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
-Output written on prova.dvi (12 pages, 24852 bytes).
