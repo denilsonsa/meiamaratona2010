@@ -1,0 +1,37 @@
+\problema{(Jogo da Virada)}
+
+\begin{descricao}
+A filial carioca da Entidade Recreativa Internacional, ERI-RJ, está promovendo um velho jogo: o Jogo da Virada, um jogo de quebra-cabeça que exige um pouco de raciocínio. Para distribuí-lo, é necessário criar uma série de configurações iniciais do jogo. O ideal é que as configurações fossem tão diversas quanto possível, mas todas as configurações deveriam ser resolvíveis. Infelizmente, nenhum membro da ERI-RJ é muito bom no jogo e têm sido difícil decidir, para cada configuração, se existe uma solução. Como você é um bom resolvedor de problemas, você é a única esperança de se agilizar o proceso de verificação das configurações.
+
+O jogo consiste de peças circulares dispostas em uma linha reta. Cada uma das peças circulares possui duas cores, preto e branco, cada cor em um dos lados. A cada lance do jogo, uma peça deve ser removida. Entretando, uma peça só pode ser removida caso esteja com o lado preto para cima. Ao removermos uma peça, cada uma de suas duas peças vizinhas (se existirem e ainda não tiverem sido removidas), são viradas, de forma que sua cor seja alterada. Uma configuração é dita "válida" se existe uma solução, um seja, uma sequência de passos que consiga remover todas as peças. Sua tarefa é criar um programa que diga, para cada configuração, se ela é válida. Na figura, é possível visualizar uma sequência de passos que resolve uma configuração inicial. Esta figura representa a configuração do primeiro caso de teste no exemplo.
+
+
+\begin{center}
+	\includegraphics[scale=0.2]{virada/virada}
+\end{center}
+
+\end{descricao}
+
+\begin{entrada}
+A entrada consiste de um conjunto de configurações, com cada uma delas ocupando duas linhas. A primeira delas contém um único inteiro, $1 \leq N \leq 100000$, dizendo o número de peças compondo uma configuração. A segunda delas contém N números separados por espaço. Um número $0$ representa que a peça está com o lado branco para cima e $1$ representa o lado preto. O conjunto de configurações termina $N=0$ e essa configuração não deve ser processada.
+\end{entrada}
+
+\begin{saida}
+Para cada configuração, deve ser impressa uma única linha na saída, contendo o número 1 caso a configuração seja válida e 0 em caso contrário.
+\end{saida}
+
+\exemplos{0.47}{0.47}
+{7		\pl
+1 0 1 1 0 1 1	\pl
+1 		\pl
+1 		\pl
+2 		\pl
+0 0 		\pl
+0
+}
+{1	\pl
+1	\pl
+0
+}
+
+%\pb

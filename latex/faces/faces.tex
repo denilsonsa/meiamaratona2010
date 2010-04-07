@@ -1,0 +1,40 @@
+\problema{(Faces e Arestas)}
+
+\begin{descricao}
+No evento Esculturas Reconhecidas Internacionalmente, vários artistas enviam seus projetos de escultura para serem construídos em tamanho grande e apreciados por todos os visitadores.
+
+Para que isso seja possível, são impostas algumas limitações às esculturas aceitas no evento:
+
+Todas as esculturas podem ser construídas a partir de polígonos planos (triângulos, quadrados, etc).
+As esculturas serão construídas a partir de uma estrutura de arame, e sobre essa estrutura serão fixadas as placas planas nos formatos dos polígonos.
+Todas as esculturas são ``fechadas'', de modo que não seja possível ver a estrutura interna delas.
+Para o próximo evento, todas as esculturas que serão expostas já foram submetidas, restando apenas encomendar o material necessário para construí-las. Este material é formado por placas cortadas no formato dos polígonos desejados e por barras retas que formam a estrutura interna de arame.
+
+Pedro, responsável pelas encomendas, recebeu a lista com todas as placas necessárias para cada escultura, porém perdeu a lista que continha a quantidade de barras necessárias para cada placa. Em vez de requisitar outra lista (o que pode demorar alguns dias), ele pensou se poderia reconstruir a lista de barras a partir da lista de polígonos.
+\end{descricao}
+
+\begin{entrada}
+A entrada será composta por vários casos de teste. A primeira linha de cada caso de teste contém um número inteiro $1 \leq n \leq 100$, que indica quantos tipos diferentes de polígonos serão encomendados. As $n$ linhas seguintes contêm, cada uma, dois números inteiros $a$, $b$ ($2 \leq a \leq 100$, $1 \leq b \leq 1000$), que indicam respectivamente a quantidade de lados do polígono e quantos polígonos desse tipo são necessários.
+
+A entrada termina com uma linha com $n=0$, que não deve ser processada.
+\end{entrada}
+
+\begin{saida}
+Para cada caso de teste deve ser impresso uma única linha, contendo o número de barras metálicas para construir a estrutura de arame da escultura.
+\end{saida}
+
+\exemplos{0.47}{0.47}
+{4	\pl
+3 1	\pl
+4 23	\pl
+10 2	\pl
+9 1	\pl
+1	\pl
+4 6	\pl
+0
+}
+{62	\pl
+12
+}
+
+%\pb

@@ -1,0 +1,32 @@
+\problema{(Rodízio de Pizza)}
+
+\begin{descricao}
+O os alunos do curso comunitário de culinária ``Experimentando Receitas Italianas'' tiveram uma ideia para aproveitar os pratos feitos no curso: será feito um evento beneficente para crianças carentes. Para isso, serão feitas pizzas para serem servidas no evento. As pizzas serão cortadas em 8 fatias idênticas e servidas em pratos do próprio curso. Entretanto, as pizzas de diferentes alunos são de diferentes tamanhos. Além disso, o pratos do curso são oriundos de doações, tendo-se assim diversos modelos distintos. Por razões de higiene, uma fatia só pode ser servida em um prato se ela couber completamente naquele prato. Como a quantidade de pizzas será grande, você foi contratado para desenvolver um programa que, a partir de uma lista contendo raio de cada pizza e os raios dos pratos, diga qual a maior quantidade de pizzas que pode ser servida de maneira adequada.
+\begin{center}
+\includegraphics[scale=0.4]{pizza/pizza.eps}
+\end{center}
+
+\end{descricao}
+
+\begin{entrada}
+A entrada é composta por diversas instâncias do problema. Cada instância é composta por 3 linhas. A primeira linha contém 2 números inteiros, $m$ e $n$, $1 \leq m \leq 1000000$, $1 \leq n \leq 1000000$ as quantidades de pizzas e pratos, respectivamente. A segunda linha contém m números inteiros, indicando os raios das pizzas. A terceira linha contém n números inteiros, contendo os tamanhos dos pratos. A entrada termina quando $m=n=0$. Essa instância não deve ser processada.
+\end{entrada}
+
+\begin{saida}
+Para cada instância de entrada deve ser impresso uma única linha contendo um inteiro referente à quantidade de fatias de pizza que podem ser servidas de maneira adequada.
+\end{saida}
+
+\exemplos{0.47}{0.47}
+{2 10			\pl
+5 5			\pl
+3 3 5 5 5 5 5 5 5 5	\pl
+2 10			\pl
+50 5			\pl
+3 3 5 5 5 5 5 5 5 5	\pl
+0 0
+}
+{10	\pl
+2
+}
+
+%\pb

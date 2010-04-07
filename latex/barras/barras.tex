@@ -1,0 +1,59 @@
+\problema{(Código de Barras)}
+
+\begin{descricao}
+Códigos de barra são largamente utilizados em diversos setores da indústria e comércio. Um dos códigos mais utilizados é o UPC, Universal Product Code, que possibilita o armazenamento de 12 dígitos decimais em cada código. Sua representação é feita utilizando um código binário e leva em consideração diversos fatores relacionados à confiabilidade do valor lido. Barras verticais representam bits $1$ e espaços em branco representam bits $0$.
+
+Cada código de barras é composto por 5 partes. A primeira delas contém um código de controle $101$. A segunda parte, chamada padrão esquerdo, codifica os 6 primeiros dígitos do valor representado. Cada um desses dígitos é representado por uma string de 7 bits. A seguir, há uma outra string de controle, $01010$, que sinaliza o centro do código de barras. A quarta parte, denomidada padrão direito, codifica os outros 6 dígitos. Finalmente, a quinta e última parte contém também uma string de controle $101$, como a string original. Cada número codificado resulta em uma string de $3+6\times7+5+6\times7+3 = 95$ bits. Os códigos de cada dígito decimal para o padrão esquerdo e o padrão direito são fornecidos na tabela a seguir.
+
+\begin{table}[htb] % [htb]-> here, top, bottom
+   \centering   % tabela centralizada
+%   \setlength{\arrayrulewidth}{2\arrayrulewidth}  % espessura da  linha
+   \setlength{\belowcaptionskip}{10pt}  % espaço entre caption e tabela
+   \caption{Padrões de codificação de dígitos.}
+   \begin{tabular}{|c|c|c|} % c=center, l=left, r=right 
+	\hline
+	Dígito & Padrão esquerdo &Padrão direito\\
+	\hline
+	0	&0001101	&1110010\\
+	1	&0011001	&1100110\\
+	2	&0010011	&1101100\\
+	3	&0111101	&1000010\\
+	4	&0100011	&1011100\\
+	5	&0110001	&1001110\\
+	6	&0101111	&1010000\\
+	7	&0111011	&1000100\\
+	8	&0110111	&1001000\\
+	9	&0001011	&1110100\\      
+      \hline
+   \end{tabular}
+%   \label{tab:Referencia_desejada}
+\end{table}
+
+Neste problema, dado um código de barras, você deverá decodificá-lo e fornecer o número representado ou informar que o código foi lido incorretamente. Observe que não há distinção entre início e fim do código, então seu programa deve ser capaz de decodificar o código de barras mesmo que este tenha sido lido de cabeça para baixo.
+
+\end{descricao}
+
+\begin{entrada}
+A entrada é descrita por um inteiro positivo $N$ na primeira linha, indicando o número de códigos de barra a serem decodificadas. Cada uma das $N$ linhas seguintes contém uma string de $95$ caracteres formada apenas pelos caracteres $0$ e $1$. Observação: no exemplo, há uma quebra de linha na string apenas para melhor visualização.
+
+\end{entrada}
+
+\begin{saida}
+Para cada código de barra, deve ser impresso o número de 12 dígitos codificado. Caso haja algum erro na string, deve ser impressa a string XXXXXXXXXXXX.
+\end{saida}
+
+\exemplos{0.54}{0.40}
+{3 \pl
+101011011101100010101111000101101000110111101010101	\pl
+01110011001101011100111001010010001110100101		\pl
+101011011101100010101111000101101000110111101000101	\pl
+11110011001101111100111001000010001110100101		\pl
+101001011100010010100111001110101100110011101010101	\pl
+01111011000101101000111101010001101110110101	
+}
+{856943414089	\pl
+XXXXXXXXXXXX	\pl
+856943414089
+}
+
+%\pb

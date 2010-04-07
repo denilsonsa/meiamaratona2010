@@ -1,0 +1,42 @@
+\problema{(Robôs Inteligentes)}
+
+\begin{descricao}
+No Encontro de Robôs Inteligentes do Rio de Janeiro, haverá uma pequena competição de programação de robôs. Nessa competição, cada time participante deverá programar seu robô para percorrer um labirinto cheio de tesouros. O time vencedor será aquele cujo robô conseguir coletar o maior número de tesouros.
+
+Vários labirintos diferentes já foram criados, porém ninguém sabe ao certo quantos tesouros são coletáveis em cada um deles. O organizador dessa competição, o Sr. Filomeno Fludêncio, está muito ocupado procurando patrocínio e divulgando o evento, e por isso pediu a sua ajuda para contar os tesouros.
+
+Dado um mapa de um labirinto com a posição do robô e as posições de ``tesouros'' espalhados pelo labirinto, o seu programa deve imprimir quantos tesouros podem ser coletados a partir da posição inicial. Um tesouro pode ser coletado apenas se o robô consegue alcançar sua posição através de movimentos para norte, sul, leste ou oeste, em qualquer quantidade ou ordem, passando apenas por posições livres. A borda mais externa do labirinto sempre conterá paredes, dessa forma, o robô nunca se perca, saindo do labirinto.
+\end{descricao}
+
+\begin{entrada}
+A entrada é composta por diversas instâncias. Cada uma das instâncias começa com dois inteiros $3 \leq m, n \leq 1000$, respectivamente o comprimento e a largura de um labirinto. As $m$ linhas seguintes descrevem o labirinto e contêm $n$ caracteres cada uma. Cada caractere `\#' representa uma parede, ou seja, uma posição que não pode ser ocupada pelo robô, ao contrário das posições ocupadas pelo caractere `.' (ponto). Um caractere `\$' representa um tesouro e um caractere `$I$' representa a posição inicial do robô. A entrada termina com um par de inteiros $m, n$ com $m=n=0$. Este caso não deve ser processado.
+\end{entrada}
+
+\begin{saida}
+Para cada instância da entrada, deve ser impressa uma única linha contendo a string ``$C/T$'', onde $C$ é a quantidade de tesouros coletáveis e $T$ é a quantidade total de tesouros no mapa.
+\end{saida}
+
+\exemplos{0.47}{0.47}
+{7 11		\pl
+\#\#\#\#\#\#\#\#\#\#\#	\pl
+\#..I...\#.\$\#\pl
+\#.\#\#\#..\$..\#	\pl
+\#.\#.\#\#\#.\$.\#	\pl
+\#.\#.\#.\$.\$.\#	\pl
+\#.....\#.\#.\#	\pl
+\#\#\#\#\#\#\#\#\#\#\#	\pl
+7 13		\pl
+\#\#\#\#\#\#\#\#\#\#\#\#\#	\pl
+\#\$\$\#........\#	\pl
+\#\#\#\#..\#\#\#\#\#.\#	\pl
+\#.I.\$.\#.\$.\#.\#	\pl
+\#\#\#\#..\#\#\#\#\#.\#	\pl
+\#\$\$\#........\#	\pl
+\#\#\#\#\#\#\#\#\#\#\#\#\#	\pl
+0 0
+}
+{5/5	\pl
+1/6
+}
+
+%\pb
