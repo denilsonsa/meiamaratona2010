@@ -36,11 +36,11 @@ int main()
 		assert(n>=1 && n <= 10000000);
 		if (v[n] >= 2)
 		{
-			printf("sim\n");
+			printf("SIM\n");
 		}
 		else
 		{
-			printf("nao\n");
+			printf("NAO\n");
 		}
 	}
 
