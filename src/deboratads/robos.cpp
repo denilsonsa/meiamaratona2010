@@ -70,7 +70,7 @@ int main() {
 			}
 		}
 		busca(li, ci);
-		printf("%d/%d tesouro(s) sao coletaveis.\n", nr, nt);
+		printf("%d/%d\n", nr, nt);
 	}
 	return 0;
 }

@@ -16,7 +16,7 @@ int psq[MAX];
 char hip[MAXHIP];
 
 int main(void) {
-	int n;
+	int n, v;
 	int s;
 	memset(hip, 0, sizeof(hip));
 	for (int i = 1; i < MAX; ++i) {
@@ -30,13 +30,14 @@ int main(void) {
 			}
 		}
 	}
-	while (true) {
-		scanf("%d", &n);
-		if (!n) break;
-		if (hip[n] > 1) {
-			printf("sim\n");
+	scanf("%d", &n);
+	while (n) {
+		n--;
+		scanf("%d", &v);
+		if (hip[v] > 1) {
+			printf("SIM\n");
 		} else {
-			printf("nao\n");
+			printf("NAO\n");
 		}
 	}
 	return 0;
