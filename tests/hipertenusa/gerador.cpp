@@ -14,7 +14,6 @@
 int v[MAX];
 
 int main(void) {
-	printf("MAX\n");
 	for (int i = 1; i <= MAX; ++i) {
 		v[i-1] = i;
 	}
