@@ -8,7 +8,7 @@ tests/%/sample_gen.in: gerador_%.exe
 gerador_%.exe: tests/%/gerador.cpp
 	$(CXX) tests/$*/gerador.cpp -o gerador_$*.exe
 
-%.exe:
+%.exe: $(SRC_DIR)/$(USER)/%.cpp
 	$(CXX) $(SRC_DIR)/$(USER)/$*.cpp -o $*.exe
 
 %_test_sample_gen: tests/%/sample_gen.in %.exe
@@ -16,11 +16,11 @@ gerador_%.exe: tests/%/gerador.cpp
 
 %_test_sample: %.exe tests/%/sample.in
 	./$*.exe < tests/$*/sample.in > $*_sample.out
-	diff tests/$*/sample.out $*_sample.out
+	diff $*_sample.out tests/$*/sample.out 
 
 %_test_full: %.exe tests/%/full.in
 	./$*.exe < tests/$*/full.in > $*_full.out
-	diff tests/$*/full.out $*_full.out
+	diff $*_full.out tests/$*/full.out 
 
 all: contando_test_sample contando_test_full
 
