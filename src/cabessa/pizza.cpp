@@ -67,10 +67,14 @@ int main()
 		for (i=0; i<m; i++)
 		{
 			scanf("%lf", &pizza[i]);
+			assert(pizza[i] <= 10000);
+			assert(pizza[i] >= 1);
 		}
 		for (i=0; i<n; i++)
 		{
 			scanf("%lf", &prato[i]);
+			assert(prato[i] <= 10000);
+			assert(prato[i] >= 1);
 		}
 
 		qsort(pizza, m, sizeof(pizza[0]), cmp);
