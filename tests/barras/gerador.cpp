@@ -63,6 +63,45 @@ void certos(int qt)
 		printf("101\n");
 	}
 }
+void tricky()
+{
+	int i;
+	printf("101");
+	for (i=0; i<6; i++)
+	{
+		printf("%s", cod[2*randab(0,9)]);
+	}
+	printf("01000");
+	for (i=0; i<6; i++)
+	{
+		printf("%s", cod[1+2*randab(0,9)]);
+	}
+	printf("101\n");
+
+	printf("101");
+	for (i=0; i<6; i++)
+	{
+		printf("%s", cod[2*randab(0,9)]);
+	}
+	printf("01010");
+	for (i=0; i<6; i++)
+	{
+		printf("%s", cod[1+2*randab(0,9)]);
+	}
+	printf("100\n");
+
+	printf("100");
+	for (i=0; i<6; i++)
+	{
+		printf("%s", cod[2*randab(0,9)]);
+	}
+	printf("01010");
+	for (i=0; i<6; i++)
+	{
+		printf("%s", cod[1+2*randab(0,9)]);
+	}
+	printf("101\n");
+}
 
 void printinv(char *s)
 {
@@ -96,14 +135,15 @@ void invertidos(int qt)
 
 int main()
 {
-	printf("%d\n", 63);
+	printf("%d\n", 66);
 	sample();//3
-	certos(1);
-	aleat(1);
-	invertidos(1);
-//	certos(10);
-//	aleat(10);
-//	invertidos(10);
+	certos(10);
+	aleat(10);
+	invertidos(10);
+	tricky();//3
+	certos(10);
+	aleat(10);
+	invertidos(10);
 
 	return 0;
 }
