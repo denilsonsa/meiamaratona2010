@@ -6,9 +6,16 @@
 int v[MAX+1];
 int v2[MAX+1];
 
+#define MASK 0x80000000
+int meurand()
+{
+	return ((rand()<<16) + rand()) & (~MASK);
+}
+
+
 int randab(int a, int b)
 {
-	return rand()%(b-a+1) + a;
+	return meurand()%(b-a+1) + a;
 }
 
 void sample()

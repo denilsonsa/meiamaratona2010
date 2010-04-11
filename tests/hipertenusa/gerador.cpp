@@ -13,14 +13,25 @@
 #define MAXT 1000000
 int v[MAX];
 
+#define MASK 0x80000000
+int meurand()
+{
+	return ((rand()<<16) + rand()) & (~MASK);
+}
+
+
 int main(void) {
+	int temp, t;
 	for (int i = 1; i <= MAX; ++i) {
 		v[i-1] = i;
 	}
 
 	for (int i=MAX-1; i>0; i--)
 	{
-		v[i] = v[rand()%(i+1)];
+		t = meurand()%(i+1);
+		temp = v[i];
+		v[i] = v[t];
+		v[t] = temp;
 	}
 
 	v[0] = 37;
