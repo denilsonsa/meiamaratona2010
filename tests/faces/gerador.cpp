@@ -38,7 +38,6 @@ void aleat(int qt)
 {
 	int i, n, cnt, t, soma, soma2;
 
-
 	while (qt--)
 	{
 		n = randab(1, 98);
@@ -109,7 +108,7 @@ void caso1()
 {
 	int i;
 	printf("98\n");
-	for (i=3; i=100; i++)
+	for (i=3; i<=100; i++)
 	{
 		printf("%d %d\n", i, 1000);
 	}
