@@ -11,7 +11,8 @@ def floodfill(mapa, rows, cols):
 
     # Workaround for lack of nonlocal
     # http://stackoverflow.com/questions/141642/what-limitations-have-closures-in-python-compared-to-language-x-closures/141710#141710
-    tesouros = [ 0 ]  
+    tesouros = 0
+    stack = []
 
     x = y = -1
     for i in xrange(rows):
@@ -20,36 +21,26 @@ def floodfill(mapa, rows, cols):
                 if x != -1 or y != -1:
                     raise RuntimeError("Duas posicoes iniciais no labirinto")
                 else:
-                    x,y = i,j
+                    x = i
+                    y = j
 
-    def visit(x,y):
-        min_y = max_y = y
+    mapa[x][y] = '#'
+    stack.append( (x,y) )
+    while stack:
+        x, y = stack.pop()
+        for nx, ny in (
+            (x-1, y+0),
+            (x+1, y+0),
+            (x+0, y-1),
+            (x+0, y+1),
+        ):
+            if mapa[nx][ny] in '.$':
+                if mapa[nx][ny] == '$':
+                    tesouros += 1
+                mapa[nx][ny] = '#'
+                stack.append( (nx,ny) )
 
-        while mapa[x][min_y] in '.$':
-            min_y -= 1
-        min_y += 1
-
-        while mapa[x][max_y] in '.$':
-            max_y += 1
-        max_y -= 1
-
-        for i in xrange(min_y, max_y+1):
-            mapa[x][i] = '#'
-
-        for i in xrange(min_y, max_y+1):
-            for nx, ny in (
-                (x-1, i+0),
-                (x+1, i+0),
-            ):
-                if mapa[nx][ny] in '.$':
-                    if mapa[nx][ny] == '$':
-                        tesouros[0] += 1
-                    visit(nx,ny)
-
-
-    mapa[x][y] = '.'
-    visit(x,y)
-    return tesouros[0]
+    return tesouros
 
 
 while True:
