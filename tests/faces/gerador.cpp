@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <cstdlib>
+#include <assert.h>
 
 #define MAX 100
 
@@ -15,7 +16,11 @@ int meurand()
 
 int randab(int a, int b)
 {
-	return meurand()%(b-a+1) + a;
+	int t = meurand()%(b-a+1) + a;
+
+	assert(t>=a && t<=b);
+
+	return t;
 }
 
 void sample()
