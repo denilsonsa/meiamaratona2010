@@ -20,22 +20,34 @@ def floodfill(mapa, rows, cols):
                 if x != -1 or y != -1:
                     raise RuntimeError("Duas posicoes iniciais no labirinto")
                 else:
-                    x = i
-                    y = j
+                    x,y = i,j
 
     def visit(x,y):
-        mapa[x][y] = '#'
-        for nx, ny in (
-            (x-1, y+0),
-            (x+1, y+0),
-            (x+0, y-1),
-            (x+0, y+1),
-        ):
-            if mapa[nx][ny] in '.$':
-                if mapa[nx][ny] == '$':
-                    tesouros[0] += 1
-                visit(nx,ny)
+        min_y = max_y = y
 
+        while mapa[x][min_y] in '.$':
+            min_y -= 1
+        min_y += 1
+
+        while mapa[x][max_y] in '.$':
+            max_y += 1
+        max_y -= 1
+
+        for i in xrange(min_y, max_y+1):
+            mapa[x][i] = '#'
+
+        for i in xrange(min_y, max_y+1):
+            for nx, ny in (
+                (x-1, i+0),
+                (x+1, i+0),
+            ):
+                if mapa[nx][ny] in '.$':
+                    if mapa[nx][ny] == '$':
+                        tesouros[0] += 1
+                    visit(nx,ny)
+
+
+    mapa[x][y] = '.'
     visit(x,y)
     return tesouros[0]
 
