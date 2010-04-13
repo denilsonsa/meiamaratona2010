@@ -19,7 +19,7 @@ long long r;
 long long comb[MAX+1][MAX+1];
 long long fat[MAX+1];
 
-int calcula_comb() {
+void calcula_comb() {
 	fat[0] = 1;
 	for (long long i = 1; i <= MAX; i++) {
 		fat[i] = fat[i-1] * i;
@@ -59,7 +59,8 @@ int main() {
 		r = 0;
 		sort(p, p+k);
 		bt(0, 0, 1);
-		printf("%I64d\n", r);
+		//printf("%I64d\n", r);
+		printf("%lld\n", r);
 	}
 	return 0;
 }

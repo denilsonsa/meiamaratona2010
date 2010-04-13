@@ -23,6 +23,9 @@ def generate_test_case(output_file):
     ]
     num_arestas = sum(a*b for a,b in faces)
 
+    if sum(b for a,b in faces) < 4:
+        raise RuntimeError("Ferrou")
+
     # Checagem para número ímpar de arestas
     if (num_arestas % 2) == 1:
         # Fato curioso: o código dentro deste if tem uma probabilidade de

@@ -135,15 +135,15 @@ void invertidos(int qt)
 
 int main()
 {
-	printf("%d\n", 66);
+	printf("%d\n", 126);
 	sample();//3
-	certos(10);
-	aleat(10);
-	invertidos(10);
+	certos(20);
+	aleat(20);
+	invertidos(20);
 	tricky();//3
-	certos(10);
-	aleat(10);
-	invertidos(10);
+	certos(20);
+	aleat(20);
+	invertidos(20);
 
 	return 0;
 }

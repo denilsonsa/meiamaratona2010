@@ -41,7 +41,7 @@ int main() {
 				r++;
 			}
 		}
-		printf("%d\n", r);
+		printf("%lld\n", r);
 	}
 	return 0;
 }
