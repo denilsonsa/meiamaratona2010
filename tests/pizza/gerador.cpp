@@ -134,5 +134,7 @@ int main()
 	aleat2(10);
 	aleat3(40);
 
+	printf("%d %d\n", 0, 0);
+
 	return 0;
 }

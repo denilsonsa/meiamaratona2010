@@ -78,31 +78,31 @@ int main()
 		}
 
 		qsort(pizza, m, sizeof(pizza[0]), cmp);
-		qsort(prato, m, sizeof(prato[0]), cmp);
+		qsort(prato, n, sizeof(prato[0]), cmp);
 
-		i = 0;
-		j = 0;
-		k = 0;
+		i = 0;  // Pizzas
+		j = 0;  // Pratos
+		k = 0;  // Fatias da pizza atual
 		resp = 0;
 
 		while (i <= m && j <= n)
 		{
 			if (k == 8)
 			{
-				k = 0;
-				i++;
+				k = 0;  // Fatias
+				i++;    // Pizzas
 				continue;
 			}
 
 			if (cabe(i, j))
 			{
-				j++;
-				k++;
+				j++;  // Pratos
+				k++;  // Fatias
 				resp++;
 			}
 			else
 			{
-				j++;
+				j++;  // Pratos
 			}
 
 		}
