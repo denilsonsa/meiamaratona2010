@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <math.h>
 
-#define MAX 1024
+#define MAX 1000001
 
 int pz[MAX], pt[MAX];
 double fat;
