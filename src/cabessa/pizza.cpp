@@ -85,7 +85,7 @@ int main()
 		k = 0;  // Fatias da pizza atual
 		resp = 0;
 
-		while (i <= m && j <= n)
+		while (i < m && j < n)
 		{
 			if (k == 8)
 			{
