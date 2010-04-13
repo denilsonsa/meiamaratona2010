@@ -21,6 +21,11 @@ void sample()
 	printf("2 10\n");
 	printf("50 5\n");
 	printf("3 3 5 5 5 5 5 5 5 5\n");
+	// As linhas seguintes nao sao sample, mas pegaram um bug no codigo do
+	// Denilson
+	printf("2 12\n");
+	printf("5 10\n");
+	printf("1 1 1 1 2 2 2 2 3 3 3 3\n");
 }
 
 #define MAXM 1000000

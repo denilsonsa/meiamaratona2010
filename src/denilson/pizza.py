@@ -50,6 +50,8 @@ while True:
     fatias = fatias_generator(pizzas)
     for p in pratos:
         diam_cos = 2 * p * cosseno
+        # Este código está errado. Ele joga fora fatias sempre
+        # que um prato é descartado.
         for f in fatias:
             if diam_cos >= f:
                 servidos += 1
